@@ -16,7 +16,7 @@ const result = await StumbleHack(fs.readFileSync('./auth.json'));
 if (!result) { console.log(chalk.red('Authentication Code Not Valid!'));
 break;
 const data = JSON.parse(result);
-console.log(chalk.bgBlack(`${chalk.yellow(`Id : ${data.User.Id} - Version : ${data.User.Version} - Username : ${data.User.Username} - Country : ${data.User.Country}`)}\n${chalk.magenta(`Jam : ${moment().format('HH:mm:ss')}`)} | ${chalk.blue(`Sukses Menambahkan Trophy : ${data.User.SkillRating}`)} | ${chalk.green(`Sukses Menambahkan Crown : ${data.User.Crowns}`)}`));
+console.log(chalk.bgBlack(`${chalk.yellow(`Id : ${data.User.Id} - Version : ${data.User.Version} - Username : ${data.User.Username} - Country : ${data.User.Country}`)}\n${chalk.magenta(`Time : ${moment().format('HH:mm:ss')}`)} | ${chalk.blue(`Success Added Trophy : ${data.User.SkillRating}`)} | ${chalk.green(`Success Added Crown : ${data.User.Crowns}`)}`));
 await turu(1000);
 } else if (result == 'BANNED') { console.log(chalk.bgRed('BANNED!!!'));
 break;
